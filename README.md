@@ -54,7 +54,6 @@ no shutdown
 
 ###### *Ref 3: Configuration de DHCP_RH_Server*
 
-
   - Le service DHCP a été activé et un pool d’adresses a été créé :
     - Nom du pool : serverPool
     - Passerelle par défaut : 192.168.10.1
@@ -66,10 +65,12 @@ no shutdown
 ###### *Ref 2: Configuration de la plage DHCP*
 <img width="526" height="510" alt="PackT-HR_Pool" src="https://github.com/user-attachments/assets/a2390d52-9178-4e11-a6be-2e776cf47f6a" />
 
+- Une fois la configuration du DHCP termine, le serveur a ete connectés au switch.
+  
 ### Postes clients – Ressources Humaines
 - Trois postes clients ont été créés pour le département Ressources Humaines et connectés au switch correspondant à l’aide de câbles cuivre droit.
   - Ils ont été renommés RH_1, RH_2 et RH_3
-  - Les trois postes ont été configurés pour obtenir automatiquement une adresse IP via DHCP
+  - Les trois postes ont été configurés pour obtenir automatiquement une adresse IP via DHCP.
 
 ###### *Ref 3: Configuration automatique de l'addresse IP pour les hotes*
 <img width="526" height="510" alt="PackT-PC_DHCP" src="https://github.com/user-attachments/assets/2a1ef25c-ad92-45c1-a816-f40167551747" />
@@ -79,3 +80,34 @@ Un test de connectivité a été effectué en envoyant un ping depuis le poste R
 
 ###### *Ref 4: *
 
+### Configuration du serveur DHCP_M_Server
+
+Le serveur DHCP_M_Server a été configuré avec l’adresse IP statique 192.168.20.253 et les paramètres suivants :
+Masque de sous-réseau : 255.255.255.0
+Passerelle par défaut : 192.168.20.1
+Serveur DNS : 192.168.30.252
+
+###### *Ref : *
+
+Un pool d’adresses DHCP a ensuite été créé avec les informations suivantes :
+Passerelle par défaut : 192.168.20.1
+Serveur DNS : 192.168.30.252
+Adresse IP de début : 192.168.20.10
+Masque de sous-réseau : 255.255.255.0
+Nombre d’utilisateurs : 25
+
+###### *Ref : *
+
+- Une fois la configuration du DHCP termine, le serveur a ete connectés au switch.
+
+### Postes clients – Département Marketing
+- Trois postes clients ont été créés pour le département Marketing et connectés au switch correspondant à l’aide de câbles cuivre droit (straight-through).
+  - Les postes ont été renommés M_1, M_2 et M_3.
+  - Les trois postes ont été configurés pour obtenir automatiquement une adresse IP via DHCP.
+
+###### *Ref : *
+
+### Tests de connectivité
+Un test de connectivité a été effectué en envoyant un ping depuis le poste M_1 vers le poste M_3, confirmant le bon fonctionnement du réseau.
+
+###### *Ref : *
