@@ -19,6 +19,8 @@ Ce projet a pour objectif de concevoir et configurer un réseau d’entreprise s
   - Serveurs (DHCP, DNS, HTTP)
 
 ## Topologie du réseau
+<img width="957" height="383" alt="PackT-Complete" src="https://github.com/user-attachments/assets/c8292795-0562-41a1-8ce2-4965d64a5acc" />
+
 Le réseau est composé des éléments suivants :
 - 1 routeur
 - 3 switchs
@@ -66,8 +68,7 @@ Le réseau est composé des éléments suivants :
   - Le deuxième switch a été nommé Switch_M
   - Le troisième switch a été nommé Serveur_Switch
 
-### Serveurs DHCP et configuration IP des postes clients
-#### DHCP_RH
+### Configuration du serveur DHCP_RH
 - Un serveur DHCP nommé DHCP_RH a été créé et configuré avec les paramètres suivants :
   - Adresse IP statique: 192.168.10.253
   - Masque de sous-réseau: 255.255.255.0
@@ -104,7 +105,7 @@ Le réseau est composé des éléments suivants :
 ###### *Ref 5: Ping entre RH1 et RH3*
 <img width="543" height="237" alt="PackT-PingRH1_RH3" src="https://github.com/user-attachments/assets/5f63aa57-0d4e-4b9b-a99d-5ec410dcc716" />
 
-#### DHCP_M
+### Configuration du serveur DHCP_M
 - Un deuxieme serveur DHCP nommé DHCP_M a été créé et configuré avec les paramètres suivants :
   - Adresse IP statique: 192.168.20.253
   - Masque de sous-réseau: 255.255.255.0
@@ -141,11 +142,12 @@ Le réseau est composé des éléments suivants :
 <img width="548" height="238" alt="PackT-PingM1_M3" src="https://github.com/user-attachments/assets/2c5b4fad-dda3-4353-9073-903fc4648fff" />
 
 ### Test de connectivité inter-départements
-- Un ping a été effectué depuis le poste client RH_1 (Ressources Humaines) vers le poste M_1 (Marketing) afin de vérifier la communication entre les différents sous-réseaux.
+- Un ping a été effectué depuis le poste client RH_2 (Ressources Humaines) vers le poste M_2 (Marketing) afin de vérifier la communication entre les différents sous-réseaux.
 
 ###### *Ref 10: Ping entre RH2 et M2*
+<img width="525" height="240" alt="PackT-Test_RH2_M2" src="https://github.com/user-attachments/assets/b1ab65ed-58d9-4a1a-9080-117541428711" />
 
-#### Serveur Web
+### Serveur Web
 - Un serveur Web nommé SVR_Web a été créé et configuré avec:
 	- Adresse IP statique : 192.168.30.252
 	- Masque de sous-réseau : 255.255.255.0
