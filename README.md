@@ -19,7 +19,7 @@ Ce projet a pour objectif de concevoir et configurer un réseau d’entreprise s
   - Serveurs (DHCP, DNS, HTTP)
 
 ## Topologie du réseau
-<img width="957" height="383" alt="PackT-Complete" src="https://github.com/user-attachments/assets/c8292795-0562-41a1-8ce2-4965d64a5acc" />
+<img width="670" height="331" alt="PackT-Complete" src="https://github.com/user-attachments/assets/51bab902-c561-4252-a8af-c3645d3b6487" />
 
 Le réseau est composé des éléments suivants :
 - 1 routeur
@@ -162,10 +162,10 @@ Le réseau est composé des éléments suivants :
 ### Test du serveur Web
 - Depuis le poste client RH_2, le navigateur Web a été ouvert et l’adresse IP du serveur Web (192.168.30.251) a été saisie pour vérifier l’accès au service HTTP.
 
-###### *Ref 12: Test a l'acces*
+###### *Ref 12: Vérification de l’accès au serveur Web*
 <img width="526" height="510" alt="PackT-Test_SVR_web" src="https://github.com/user-attachments/assets/d804b65a-02d2-4824-9eca-12948242891b" />
 
-#### Serveur DNS 
+### Serveur DNS 
 - Un serveur DNS nommé SVR_DNS a été créé et configuré avec: 
 	- Adresse IP statique : 192.168.30.252
 	- Masque de sous-réseau : 255.255.255.0
@@ -176,7 +176,7 @@ Le réseau est composé des éléments suivants :
 
 - Depuis l’onglet Services, section DNS, le service DNS a été activé.  Un enregistrement DNS pour le site Web, www.ciscopackettracer.com, a été créé associant le nom de domaine à l’adresse IP du serveur Web.
 	
-###### *Ref 14: PackT-Add_web*
+###### *Ref 14: Mise en place du service DNS et association du domaine au serveur Web*
 <img width="526" height="510" alt="PackT-Config_Add_Web" src="https://github.com/user-attachments/assets/f6e9425a-ff5e-43df-871f-023b031302e2" />
 
 - Le serveur DNS a ensuite été connecté au switch de la salle serveurs.
